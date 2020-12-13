@@ -11,6 +11,18 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
       super.add(this.whichIndex(element), element);
     }
   }
+  public boolean add(T element)
+  {
+    if (element == null)
+    {
+      throw new IllegalArgumentException("null cannot be added");
+    }
+    else
+    {
+      this.add(this.whichIndex(element), element);
+      return true;
+    }
+  }
   private int whichIndex(T element)
   {
     if (this.size() == 0)
