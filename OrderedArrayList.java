@@ -1,5 +1,14 @@
+import java.util.ArrayList;
 public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>
 {
+  public OrderedArrayList()
+  {
+    super();
+  }
+  public OrderedArrayList(int initialCapacity)
+  {
+    super(initialCapacity);
+  }
   public void add(int index, T element)
   {
     if (element == null)
@@ -25,9 +34,6 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
   public T set(int index, T element)
   {
-    //[5,7,9]
-    //set(1,10)
-    //[5,9]
     if (element == null)
     {
       throw new IllegalArgumentException("null cannot be added");
